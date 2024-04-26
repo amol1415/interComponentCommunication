@@ -1,0 +1,26 @@
+<p>parent works!</p>
+<app-child [parent1]="parent" (child1)="fetchChildData($event)"></app-child>
+
+
+
+<br><br>
+<ul *ngFor="let x of ChildData">
+    <li>{{x.name}}</li>
+    <li>{{x.age}}</li>
+    <li>{{x. Village}}</li>
+
+</ul>
+
+<app-viewchild></app-viewchild>
+
+
+<br><br>
+<button class="btn btn-info" (click)="dataFromViewChild()">viewData</button>
+
+<br><br>
+<ul *ngFor="let x of viewData">
+    <li>{{x.name}}</li>
+    <li>{{x.age}}</li>
+    <li>{{x. Village}}</li>
+
+</ul>
